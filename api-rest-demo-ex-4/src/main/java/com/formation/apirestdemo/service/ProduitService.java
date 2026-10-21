@@ -20,7 +20,7 @@ public class ProduitService {
      * Spring injecte automatiquement le ProduitRepository.
      */
 
-    public ProduitService(ProduitRepository produitRepository, NotificationService notificationService) {
+    public ProduitService(ProduitRepository produitRepository, @Qualifier("consoleNotificationService") NotificationService notificationService) {
         this.produitRepository = produitRepository;
         this.notificationService = notificationService;
     }
